@@ -1,23 +1,28 @@
-//2.1.1
+// 2.1.1
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
+
+int main() {
     int a, b;
-    int c,d;
+    int c, d;
     string m;
     string x;
-    cin >> a >> b>> x;
-    cout << a<<" "<< b<<" "<<x<<endl;
+
+    cin >> a >> b >> x;
+    cout << a << " " << b << " " << x << endl;
 
     scanf("%d %d", &c, &d);
     printf("%d %d\n", c, d);
 
-    getline(cin , m);
-    cout << m;
+    cin.ignore(); // Para limpiar el buffer antes de getline
+    getline(cin, m);
+    cout << m << endl;
 
     string p;
-    while(cin >> p){
+    while (cin >> p) {
+        if (p == "fin") break;
         cout << p << "\n";
     }
+
     return 0;
 }
